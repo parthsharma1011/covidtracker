@@ -36,7 +36,7 @@ st.sidebar.subheader('Search by country 📍')
 country = st.sidebar.selectbox('Country', df0.Country)
 country1 = st.sidebar.selectbox('Compare with another Country', df0.Country)
 if st.sidebar.button('Refresh Data'):
-    raise RerunException(st.ScriptRequestQueue.RerunData(None))
+    raise RerunException(st._RerunData(None))
 
 if country != 'Select a Country':
     slug = df0.Slug[df0['Country'] == country].to_string(index=False)[1:]
