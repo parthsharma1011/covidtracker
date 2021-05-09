@@ -26,6 +26,11 @@ url = 'https://api.covid19api.com/countries'
 r = requests.get(url)
 df0 = json_normalize(r.json())
 
+
+
+
+##def new(unc)
+
 top_row = pd.DataFrame({'Country': ['Select a Country'], 'Slug': ['Empty'], 'ISO2': ['E']})
 # Concat with old DataFrame and reset the Index.
 df0 = pd.concat([top_row, df0]).reset_index(drop=True)
